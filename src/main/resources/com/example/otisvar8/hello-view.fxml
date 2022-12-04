@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.otisvar8.HelloController">
+   <children>
+      <TreeView fx:id="treeView" layoutX="200.0" layoutY="100.0" onContextMenuRequested="#editItem" prefHeight="400.0" prefWidth="400.0" />
+   </children>
+</AnchorPane>
