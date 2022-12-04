@@ -24,22 +24,31 @@ public class HelloController implements Initializable {
         treeView.setEditable(true);
         treeView.setCellFactory(TextFieldTreeCell.forTreeView());
 
-        TreeItem<String> fruit = new TreeItem<>("fruit");
-        TreeItem<String> drink = new TreeItem<>("drink");
-        TreeItem<String> salad = new TreeItem<>("salad");
+        TreeItem<String> body = new TreeItem<>("Корпус");
 
-        fruit.getChildren().add(new TreeItem<String>("Apple"));
-        fruit.getChildren().add(new TreeItem<String>("Orange"));
+        TreeItem<String> dataProcessing = new TreeItem<>("Микросхема обработки данных");
 
-        drink.getChildren().addAll(
-                new TreeItem<>("Cola"),
-                new TreeItem<>("Fanta"));
+        TreeItem<String> plugConnect = new TreeItem<>("Подсистема разъемов подключения");
+        plugConnect.getChildren().addAll(
+                new TreeItem<>("Разъем питания"),
+                new TreeItem<>("Разъем приема данных"),
+                new TreeItem<>("Разъем передачи данных"));
 
-        rootItem.getChildren().addAll(fruit,drink,salad);
+        TreeItem<String> keys = new TreeItem<>("Подсистема клавиш клавиатуры");
+        keys.getChildren().addAll(
+                new TreeItem<>("Алфавитно-цифровые клавиши"),
+                new TreeItem<>("Специальные клавиши"),
+                new TreeItem<>("Функциональные клавиши"),
+                new TreeItem<>("Клавиши управления питанием"),
+                new TreeItem<>("Клавиши числовой клавиатуры"));
 
+        TreeItem<String> clickHandling = new TreeItem<>("Подсистема обработки нажатий");
+        clickHandling.getChildren().addAll(
+                new TreeItem<>("Колпачок клавиши"),
+                new TreeItem<>("Контакт на мембране"),
+                new TreeItem<>("Мембранный контролер"));
 
-
-
+        rootItem.getChildren().addAll(body,dataProcessing,plugConnect,keys,clickHandling);
     }
 
     public void editItem(ContextMenuEvent contextMenuEvent) {
